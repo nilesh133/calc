@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Padauk&display=swap" rel="stylesheet">
+    <title>Calculator</title>
+   
+</head>
+
+<body>
+    <div id="container">
+        <input type="text" id="input">
+        <div id="button-container">
+            <button class="operators">C</button>
+            <button class="operators">X</button>
+            <button class="operators">%</button>
+            <button class="operators">/</button>
+            <button class="numbers">7</button>
+            <button class="numbers">8</button>
+            <button class="numbers">9</button>
+            <button class="operators">*</button>
+            <button class="numbers">4</button>
+            <button class="numbers">5</button>
+            <button class="numbers">6</button>
+            <button class="operators">-</button>
+            <button class="numbers">1</button>
+            <button class="numbers">2</button>
+            <button class="numbers">3</button>
+            <button class="operators">+</button>
+            <button class="numbers">00</button>
+            <button class="numbers">0</button>
+            <button class="numbers">.</button>
+            <button class="operators">=</button>
+        </div>
+    </div>
+    <h2>By: Nilesh Prajapati</h2>
+
+    <script>
+        let inpScreen = document.getElementById('input');
+        let btn = document.querySelectorAll('button');
+        inputVal = '';
+
+        for (let items of btn) {
+            items.addEventListener('click', function (e) {
+                buttonNum = e.target.innerText;
+                if (buttonNum == 'x') {
+                    buttonNum = '*'
+                    inputVal += buttonNum;
+                    inpScreen.value = inputVal;
+                }
+
+                else if (buttonNum == 'C') {
+                    inputVal = "";
+                    inpScreen.value = inputVal;
+                }
+
+                else if (buttonNum == '=') {
+                    inpScreen.value = eval(inputVal);
+                    inputVal = '';
+                }
+
+                else if (buttonNum == 'X') {
+                    inputVal = inputVal.slice(0, -1);
+                    inpScreen.value = inputVal;
+                }
+
+                else {
+                    inputVal += buttonNum;
+                    inpScreen.value = inputVal;
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

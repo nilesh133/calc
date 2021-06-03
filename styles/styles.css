@@ -1,0 +1,70 @@
+
+body {
+    background-color: rgb(155, 150, 150);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#container {
+    width: 350px;
+    padding: 20px;
+    background-color: rgb(182, 180, 180);
+    box-shadow: 0 8px 8px 9px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 3px solid black;
+    border-radius: 60px;
+}
+
+#button-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+input {
+    width: 310px;
+    padding: 15px;
+    border-radius: 4px;
+    margin: 4px;
+    font-size: 35px;
+    font-weight: bold;
+    border: 3.5px solid black;
+    border-radius: 40px;
+}
+
+button {
+    border: 1px solid transparent;
+    cursor: pointer;
+    width: 70px;
+    height: 70px;
+    margin: 4px;
+    font-size: 35px;
+    font-weight: 500;
+    color: black;
+    box-shadow: 4px 2px 2px #615b5b;
+    border-radius: 50%;
+}
+
+.numbers {
+    background-color: rgba(107, 102, 102, 0.5);
+}
+
+.operators {
+    background-color: orange;
+}
+
+.numbers:hover {
+    background-color: rgb(126, 119, 119);
+    border-radius: 50%;
+}
+
+.operators:hover {
+    background-color: rgb(212, 158, 57);
+}
+
+h2 {
+    font-family: 'Karla', sans-serif;
+    color:rgb(70, 60, 60)
+}
